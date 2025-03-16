@@ -39,7 +39,21 @@ class Queue {
    * and return its value. Should throw an error if the queue is empty. */
 
   dequeue() {
-
+    // handle empty queue 
+    if(this.isEmpty()){
+      throw new Error("Queue is empty.");
+    }
+    // store front value 
+    const dequeuedVal = this.front.val;
+    // move front value to be next node 
+    this.front = this.front.next;
+    
+    // reset rear if queue now empty 
+    if(this.isEmpty()){
+      this.rear = null;
+    }
+    
+    return dequeuedVal;
   }
 
   /** peek(): return the value of the first node in the queue. */
