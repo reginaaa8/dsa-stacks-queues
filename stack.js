@@ -20,7 +20,10 @@ class Stack {
   /** push(val): add new value to end of the stack. Returns undefined. */
 
   push(val) {
-
+    const node = new Node(val);
+    node.next = this.first;
+    this.first = node;
+    this.size++;
   }
 
   /** pop(): remove the node from the top of the stack
