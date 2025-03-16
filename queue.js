@@ -52,14 +52,14 @@ class Queue {
     if(this.isEmpty()){
       this.rear = null;
     }
-    
+
     return dequeuedVal;
   }
 
   /** peek(): return the value of the first node in the queue. */
 
   peek() {
-
+    return this.val.first()
   }
 
   /** isEmpty(): return true if the queue is empty, otherwise false */
